@@ -14,6 +14,7 @@
     <h3>Style e Class Binding</h3>
     <div>
       Selecione uma classe:
+      <!--Dafinindo variável local(classe) e escutando o ecento(change)-->
       <select #classe (change)= 0>
         <option value="alert-primary">Primary</option>
         <option value="alert-secondary">Secondary</option>
@@ -25,10 +26,12 @@
         <option value="alert-danger">Danger</option>
       </select>
       <br><br>
+      <!--Usando interpolação pra passar o valor-->
       <div class="alet {{ classe.value }}" role="alert">
         Este texto setá colorido de acordo com a classe escolhida
       </div>
       <br>
+      <!--Usando o proprety binding pra adicionar as classe e fazendo comparação de valor-->
       <div class="alert" role="alert" [class.alert-primary]="classe.value == 'alert-primary'">
         A simple primary alert—check it out!
       </div>
@@ -56,4 +59,24 @@
       </div>
     </div>
   </article>
-    </section>
+  <article>
+    <h3>Event Binding</h3>
+    <button class="btn btn-primary"
+    (click)="botaoClicado()">
+      Me clique
+  </button>
+  <br><br>
+  <input type="text" 
+  (keyup)="onKeyUp($event)"
+  (keyup.enter)="salvaValor(campoInput.value)"
+  (blur)="salvaValor(campoInput.value)" #campoInput
+  >
+  <br>
+  <p> Valor Atual: {{ valorAtual }}</p>
+  <p> Valor salvo: {{ valorDigitado }}</p>
+  <span (mouseouver)="onMouseOuverOut()" (mouseout)="onMouseOuverOut()" 
+  [class.highlight]="isMouseOuver" >
+    Passe o mouse sobre mim
+  </span>
+  </article>
+</section>

@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
-  urlImage: string = 'http://lorempixel.com/400/200/nature/'
+  valorDigitado: string;
+  valorAtual: string;
+  urlImage: string = 'http://lorempixel.com/400/200/nature/';
+  isMouseOuver: boolean = false;
   getUrl(){
     return 'http://loiane.training.com';
+  }
+
+  botaoClicado(){
+    alert("O botão foi clicado!");
+  }
+
+  onKeyUp(evento: KeyboardEvent){
+    this.valorAtual = ((<HTMLInputElement>evento.target).value);
+  }
+
+  salvaValor(valor){
+    this.valorDigitado = valor;
+  }
+
+  onMouseOuverOut(){
+    this.isMouseOuver = !this.isMouseOuver
   }
   constructor() { }
 
