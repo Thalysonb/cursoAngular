@@ -11,6 +11,11 @@ export class DataBindingComponent implements OnInit {
   valorAtual: string;
   urlImage: string = 'http://lorempixel.com/400/200/nature/';
   isMouseOuver: boolean = false;
+  
+  pessoa: any ={
+    nome: 'thalyson',
+    idade: '21'
+  }
   getUrl(){
     return 'http://loiane.training.com';
   }

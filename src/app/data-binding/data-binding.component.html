@@ -79,4 +79,12 @@
     Passe o mouse sobre mim
   </span>
   </article>
+  <article>
+    <h3>Two-way Data Binding</h3>
+    <!--Não pode ter espaço entre o nome da diretiva e os parênteses-->
+    <input type="text" [(ngModel)]="pessoa.nome">
+    <input type="text" [(ngModel)]="pessoa.idade">
+    <br>
+    <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos</p>
+  </article>
 </section>
