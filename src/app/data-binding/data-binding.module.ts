@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataBindingComponent } from './data-binding.component';
 
+import { InputPropretyComponent } from '../input-proprety/input-proprety.component';
 @NgModule({
-  declarations: [DataBindingComponent],
+  declarations: [
+    DataBindingComponent,
+  ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    InputPropretyComponent
   ],
   exports:[
     DataBindingComponent
