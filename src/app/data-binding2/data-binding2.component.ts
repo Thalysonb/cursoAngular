@@ -34,6 +34,11 @@ export class DataBinding2Component implements OnInit {
   onMouseOuverOut(){
     this.isMouseOuver = !this.isMouseOuver
   }
+
+  onMudouValor(evento){
+    console.log(evento);
+    
+  }
   constructor() { }
 
   ngOnInit() {

@@ -1,6 +1,6 @@
 <h1>Data Binging</h1>
 <section>
-  <article>
+  <!-- <article>
     <h3> Interpolation/ Interpolação</h3>
     <p>String renderizada com interpolação: {{ getUrl() }}</p>
     <p>O resultado de 1 + 1 = {{ 1 + 1 }}</p>
@@ -14,7 +14,7 @@
     <h3>Style e Class Binding</h3>
     <div>
       Selecione uma classe:
-      <!--Dafinindo variável local(classe) e escutando o ecento(change)-->
+      Definindo variável local(classe) e escutando o ecento(change)
       <select #classe (change)= 0>
         <option value="alert-primary">Primary</option>
         <option value="alert-secondary">Secondary</option>
@@ -26,12 +26,12 @@
         <option value="alert-danger">Danger</option>
       </select>
       <br><br>
-      <!--Usando interpolação pra passar o valor-->
+      Usando interpolação pra passar o valor
       <div class="alet {{ classe.value }}" role="alert">
         Este texto setá colorido de acordo com a classe escolhida
       </div>
       <br>
-      <!--Usando o proprety binding pra adicionar as classe e fazendo comparação de valor-->
+      Usando o proprety binding pra adicionar as classe e fazendo comparação de valor
       <div class="alert" role="alert" [class.alert-primary]="classe.value == 'alert-primary'">
         A simple primary alert—check it out!
       </div>
@@ -81,15 +81,16 @@
   </article>
   <article>
     <h3>Two-way Data Binding</h3>
-    <!--Não pode ter espaço entre o nome da diretiva e os parênteses-->
+    Não pode ter espaço entre o nome da diretiva e os parênteses
     <input type="text" [(ngModel)]="pessoa.nome">
     <input type="text" [(ngModel)]="pessoa.idade">
     <br>
     <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos</p>
-  </article>
+  </article> -->
   <article>
     <h3>Input/Output Propreties</h3>  
     <app-curso [nome]="nomeCurso"></app-curso>
+    <app-output-property [valor]="20" (mudouValor)="onMudouValor($event)"></app-output-property>
   </article>
 </section>
 

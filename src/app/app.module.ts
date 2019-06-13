@@ -9,12 +9,14 @@ import { CursosModule } from './cursos/cursos.module';
 import { DataBindingModule } from './data-binding/data-binding.module';
 import { InputPropretyComponent } from './input-proprety/input-proprety.component';
 import { DataBinding2Component } from './data-binding2/data-binding2.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
 @NgModule({
   declarations: [
     AppComponent,
     MeuPrimeiroComponent,
     InputPropretyComponent,
     DataBinding2Component,
+    OutputPropertyComponent,
   ],
   imports: [
     BrowserModule,
